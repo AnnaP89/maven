@@ -16,7 +16,7 @@ public class BonusServiceTest {
             int expected = 30; // 1000*3% = 30
 
             // вызываем целевой метод:
-            long actual = service.calculate(amount, registered);
+            long actual = service.calcBonus(amount, registered);
 
             // производим проверку (сравниваем ожидаемый и фактический):
             Assertions.assertEquals(expected, actual);
@@ -31,7 +31,7 @@ public class BonusServiceTest {
             int expected = 500;
 
             // вызываем целевой метод:
-            long actual = service.calculate(amount, registered);
+            long actual = service.calcBonus(amount, registered);
 
             // производим проверку (сравниваем ожидаемый и фактический):
             Assertions.assertEquals(expected, actual);

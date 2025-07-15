@@ -1,7 +1,7 @@
 public class BonusService {
-    public long calculate(int amount, boolean isRegistered) {
+    public int calcBonus(long amount, boolean isRegistered) {
         int percent = isRegistered ? 3 : 1;
-        int bonus = amount * percent / 100;
+        int bonus = Math.toIntExact(amount * percent / 100);
         int limit = 500;
         if (bonus > limit) {
             bonus = limit;
